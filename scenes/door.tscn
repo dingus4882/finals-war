@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://2fm75csd3qxc"]
+
+[ext_resource type="Texture2D" uid="uid://cdb0l7ty3g4a2" path="res://assets/door.png" id="1_ba8gm"]
+[ext_resource type="Script" uid="uid://c3l8a08tfdb0j" path="res://scenes/door.gd" id="1_uvdjg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v6xrn"]
+size = Vector2(18, 34)
+
+[node name="door" type="Area2D" unique_id=1235129490]
+collision_mask = 2
+script = ExtResource("1_uvdjg")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=134732739]
+texture = ExtResource("1_ba8gm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=627550400]
+shape = SubResource("RectangleShape2D_v6xrn")
+
+[node name="Label" type="Label" parent="." unique_id=201195955]
+offset_left = -22.0
+offset_top = 45.0
+offset_right = 22.0
+offset_bottom = 59.0
+theme_override_font_sizes/font_size = 12
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
