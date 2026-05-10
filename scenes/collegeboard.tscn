@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://bc1ghm41e5njm"]
+
+[ext_resource type="Texture2D" uid="uid://bwhrkkqouktjo" path="res://assets/collegeboard.png" id="1_20bch"]
+[ext_resource type="Script" uid="uid://ccks5fdtms61y" path="res://scenes/collegeboard.gd" id="1_e5fpg"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_la61t"]
+radius = 43.011627
+
+[node name="collegeboard" type="Area2D" unique_id=934519583]
+collision_mask = 2
+script = ExtResource("1_e5fpg")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=634819837]
+texture = ExtResource("1_20bch")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1898424153]
+shape = SubResource("CircleShape2D_la61t")
+
+[node name="Label" type="Label" parent="." unique_id=796884560]
+offset_left = -21.0
+offset_top = 38.0
+offset_right = 22.0
+offset_bottom = 55.0
+theme_override_font_sizes/font_size = 12
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
