@@ -1,17 +1,17 @@
-[gd_scene format=3 uid="uid://bc1ghm41e5njm"]
+[gd_scene format=3 uid="uid://cirimojf6we0d"]
 
-[ext_resource type="Texture2D" uid="uid://bwhrkkqouktjo" path="res://assets/collegeboard.png" id="1_20bch"]
-[ext_resource type="Script" uid="uid://ccks5fdtms61y" path="res://scenes/collegeboard.gd" id="1_e5fpg"]
+[ext_resource type="Script" uid="uid://ccks5fdtms61y" path="res://scenes/collegeboard.gd" id="1_md0e3"]
+[ext_resource type="Texture2D" uid="uid://bwhrkkqouktjo" path="res://assets/collegeboard.png" id="2_4ra3w"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_la61t"]
 radius = 43.011627
 
 [node name="enemy" type="Area2D" unique_id=934519583]
 collision_mask = 2
-script = ExtResource("1_e5fpg")
+script = ExtResource("1_md0e3")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=634819837]
-texture = ExtResource("1_20bch")
+texture = ExtResource("2_4ra3w")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1898424153]
 shape = SubResource("CircleShape2D_la61t")
