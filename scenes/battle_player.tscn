@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dkn3n8y6dp8gp"]
+
+[ext_resource type="Texture2D" uid="uid://brrus040fl5xj" path="res://assets/spriteF.png" id="1_d7rp0"]
+[ext_resource type="Script" uid="uid://dni5s36fvdesf" path="res://scenes/battle_player.gd" id="1_omjo4"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_omjo4"]
+
+[node name="battlePlayer" type="Area2D" unique_id=401584824]
+script = ExtResource("1_omjo4")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2094230724]
+texture = ExtResource("1_d7rp0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1362539021]
+shape = SubResource("CircleShape2D_omjo4")
