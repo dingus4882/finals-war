@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cirimojf6we0d"]
 
-[ext_resource type="Script" uid="uid://ccks5fdtms61y" path="res://scenes/collegeboard.gd" id="1_md0e3"]
+[ext_resource type="Script" uid="uid://bqjls0durjqby" path="res://scripts/enemy2.gd" id="1_md0e3"]
 [ext_resource type="Texture2D" uid="uid://bwhrkkqouktjo" path="res://assets/collegeboard.png" id="2_4ra3w"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_la61t"]
