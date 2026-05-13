@@ -1,7 +1,7 @@
 extends CharacterBody2D
 #comment
-
-const SPEED = 130.0
+#var u:= utils.new()
+var SPEED = 130.0
 const JUMP_VELOCITY = 0.0
 
 

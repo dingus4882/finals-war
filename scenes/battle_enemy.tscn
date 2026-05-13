@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://bjrq20gt4mal8"]
+
+[ext_resource type="Texture2D" uid="uid://bwhrkkqouktjo" path="res://assets/collegeboard.png" id="1_fjj4u"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bvk4b"]
+
+[node name="battleEnemy" type="Area2D" unique_id=1880172490]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1695260855]
+texture = ExtResource("1_fjj4u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1966254239]
+shape = SubResource("CircleShape2D_bvk4b")

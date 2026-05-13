@@ -19,4 +19,5 @@ texture = ExtResource("1_4flbx")
 position = Vector2(0, -15)
 shape = SubResource("CapsuleShape2D_onrkg")
 
+[connection signal="child_entered_tree" from="." to="." method="_on_child_entered_tree"]
 [connection signal="ready" from="." to="." method="_on_ready"]
