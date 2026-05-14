@@ -1,6 +1,7 @@
 extends Area2D
 
 var camZoom = Vector2 (2.5,2.5)
+var playerLoc = Vector2(135.0,75.0)
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	print("ooga booga")
@@ -20,6 +21,7 @@ func _input(event):
 	if event.is_action_pressed("Battle"):
 		#$"../../battle".show()
 		$"../../battleMap".show()
+		$"../../Player".set_motion_mode(1)
 		$"../../Player".hide()
 		$"../../Player/Camera2D".set_zoom(camZoom)
 		$"..".queue_free()
