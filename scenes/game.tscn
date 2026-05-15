@@ -11,6 +11,7 @@
 [ext_resource type="Script" uid="uid://dolya0ir5nwub" path="res://scripts/battle_enemy.gd" id="7_vtaks"]
 [ext_resource type="PackedScene" uid="uid://dkn3n8y6dp8gp" path="res://scenes/battle_player.tscn" id="8_vtaks"]
 [ext_resource type="PackedScene" uid="uid://dnv3jp2g26thr" path="res://scenes/weapons.tscn" id="10_kvpfn"]
+[ext_resource type="Texture2D" uid="uid://jbnilydnxbds" path="res://assets/fightLabel.png" id="11_dinhu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lnu2h"]
 texture = ExtResource("2_yqjtg")
@@ -117,6 +118,13 @@ scale = Vector2(1.5, 1.5)
 
 [node name="Timer" type="Timer" parent="battleMap" unique_id=84488997]
 
+[node name="TimerLabel" type="Sprite2D" parent="battleMap/Timer" unique_id=2063540966]
+texture = ExtResource("11_dinhu")
+
+[node name="Label" type="Label" parent="battleMap/Timer" unique_id=932740192]
+offset_right = 40.0
+offset_bottom = 23.0
+
 [node name="Player" parent="." unique_id=491639410 instance=ExtResource("1_uwrxv")]
 position = Vector2(-8, 39)
 
@@ -126,3 +134,4 @@ zoom = Vector2(4, 4)
 position_smoothing_enabled = true
 
 [connection signal="ready" from="." to="." method="_on_ready"]
+[connection signal="timeout" from="battleMap/Timer" to="battleMap/battleEnemy" method="_on_timer_timeout"]
