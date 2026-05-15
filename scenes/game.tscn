@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cirimojf6we0d" path="res://scenes/enemy.tscn" id="5_u5sy4"]
 [ext_resource type="Texture2D" uid="uid://dlgdb4vpt8em4" path="res://assets/tilemap-pixilart.png" id="6_u5sy4"]
 [ext_resource type="Texture2D" uid="uid://bwhrkkqouktjo" path="res://assets/collegeboard.png" id="7_0tnpc"]
-[ext_resource type="Script" uid="uid://dolya0ir5nwub" path="res://scenes/battle_enemy.gd" id="7_vtaks"]
+[ext_resource type="Script" uid="uid://dolya0ir5nwub" path="res://scripts/battle_enemy.gd" id="7_vtaks"]
 [ext_resource type="PackedScene" uid="uid://dkn3n8y6dp8gp" path="res://scenes/battle_player.tscn" id="8_vtaks"]
 [ext_resource type="PackedScene" uid="uid://dnv3jp2g26thr" path="res://scenes/weapons.tscn" id="10_kvpfn"]
 
@@ -114,6 +114,8 @@ position = Vector2(136, 98)
 scale = Vector2(1.5, 1.5)
 
 [node name="ItemList" parent="battleMap" unique_id=606056318 instance=ExtResource("10_kvpfn")]
+
+[node name="Timer" type="Timer" parent="battleMap" unique_id=84488997]
 
 [node name="Player" parent="." unique_id=491639410 instance=ExtResource("1_uwrxv")]
 position = Vector2(-8, 39)

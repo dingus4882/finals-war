@@ -2,9 +2,21 @@ extends Area2D
 
 var camZoom = Vector2 (2.5,2.5)
 var playerLoc = Vector2(135.0,75.0)
+var enemyNum = 0
+
+var apIdle = idleEnemy.new("Collegeboard", load("res://assets/collegeboard.png"))
+var canIdle = idleEnemy.new("Canvas", load("res://assets/canva.png"))
+var coralIdle = idleEnemy.new("Coral", load("res://assets/coral.png"))
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	if enemyNum == 0:
+		$Sprite2D.set_texture(apIdle.texture)
+	if enemyNum == 1:
+		$Sprite2D.set_texture(canIdle.texture)
+	if enemyNum == 2:
+		$Sprite2D.set_texture(coralIdle.texture)
 	print("ooga booga")
+	enemyNum = enemyNum+1
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 

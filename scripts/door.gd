@@ -1,5 +1,7 @@
 extends Area2D
 
+var num = load("res://scripts/battle_enemy.gd")
+
 func _ready():
 	$"../../../classroomMap".hide()
 	print("I'm a door")
