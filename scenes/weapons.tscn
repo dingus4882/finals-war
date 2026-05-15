@@ -4,36 +4,23 @@
 [ext_resource type="Texture2D" uid="uid://byw51uo352yqn" path="res://assets/book.png" id="2_0ccn8"]
 [ext_resource type="Texture2D" uid="uid://bnc28o66sj5w5" path="res://assets/pencil.png" id="3_oqpq1"]
 [ext_resource type="Texture2D" uid="uid://b1vsymqo7i3s7" path="res://assets/redbull.png" id="4_acacc"]
+[ext_resource type="Script" uid="uid://g4rnyuf7dp6p" path="res://scripts/weapons.gd" id="5_0ccn8"]
 
-[node name="weapons" type="Node2D" unique_id=1006870308]
+[node name="ItemList" type="ItemList" unique_id=606056318]
+offset_right = 40.0
+offset_bottom = 40.0
+auto_width = true
+auto_height = true
+item_count = 4
+item_0/text = "Notecard"
+item_0/icon = ExtResource("1_pe4jq")
+item_1/text = "Book"
+item_1/icon = ExtResource("2_0ccn8")
+item_2/text = "Pencil"
+item_2/icon = ExtResource("3_oqpq1")
+item_3/text = "Energy Drink"
+item_3/icon = ExtResource("4_acacc")
+script = ExtResource("5_0ccn8")
 
-[node name="notecard" type="TextureButton" parent="." unique_id=1565468881]
-offset_left = -37.0
-offset_top = -1.0
-offset_right = -1.0
-offset_bottom = 20.0
-texture_normal = ExtResource("1_pe4jq")
-
-[node name="Area2D" type="Area2D" parent="notecard" unique_id=294811153]
-position = Vector2(37, 1)
-
-[node name="book" type="TextureButton" parent="." unique_id=630962232]
-offset_left = 5.0
-offset_top = -1.0
-offset_right = 23.0
-offset_bottom = 23.0
-texture_normal = ExtResource("2_0ccn8")
-
-[node name="pencil" type="TextureButton" parent="." unique_id=1617994320]
-offset_left = -36.0
-offset_top = 25.0
-offset_right = -10.0
-offset_bottom = 51.0
-texture_normal = ExtResource("3_oqpq1")
-
-[node name="redbull" type="TextureButton" parent="." unique_id=1704064329]
-offset_left = 6.0
-offset_top = 30.0
-offset_right = 25.0
-offset_bottom = 60.0
-texture_normal = ExtResource("4_acacc")
+[connection signal="item_clicked" from="." to="." method="_on_item_clicked"]
+[connection signal="item_selected" from="." to="." method="_on_item_selected"]
