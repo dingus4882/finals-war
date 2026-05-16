@@ -37,7 +37,6 @@ func _input(event):
 		$"../../Player".set_motion_mode(1)
 		$"../../Player".hide()
 		$"../../Player/Camera2D".set_zoom(camZoom)
-		$"../../battleMap/ItemList".hide()
 		#$"../../Player/Sprite2D".draw_set_transform(playerLoc, 0.0, playerScale)
 		$"..".queue_free()
 		

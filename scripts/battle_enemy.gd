@@ -20,7 +20,6 @@ var tiny = Vector2(0.75, 0.75)
 func _ready():
 	titleTimer.set_wait_time(title)
 	atkTimer.set_wait_time(atkTime)
-	$"../ItemList".hide()
 	if enemyNum == 0:
 		boss = collegeboard
 		$Sprite2D.set_texture(load("res://assets/collegeboard.png"))
