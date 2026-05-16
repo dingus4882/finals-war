@@ -9,40 +9,46 @@ var coral = bosses.new("Coral", 200, 50, load("res://assets/coral.png"))
 var boss = coral
 
 var playerStats = myPlayer.new("Player", 100, load("res://assets/spriteF.png"))
-var atkTime = 10
-var title = 5
+var atkTime = 5
+var title = 3
 
 var titleTimer = Timer.new()
-var atkTimer = Timer.new()
+@onready var atkTimer = $Timer
 
+var tiny = Vector2(0.75, 0.75)
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$"../Timer/TimerLabel".hide()
+	titleTimer.set_wait_time(title)
+	atkTimer.set_wait_time(atkTime)
 	$"../ItemList".hide()
 	if enemyNum == 0:
 		boss = collegeboard
+		$Sprite2D.set_texture(load("res://assets/collegeboard.png"))
 	if enemyNum == 1:
 		boss = canvas
+		$Sprite2D.set_texture(load("res://assets/canva.png"))
 	if enemyNum == 2:
 		boss = coral
+		$Sprite2D.set_texture(load("res://assets/coral.png"))
+		$Sprite2D.set_scale(tiny)
 	enemyNum = enemyNum + 1
-	titleTimer.start(title)
+	_battle()
 	
-	
-func battle():
+func _battle() -> void:
 	while boss.health && playerStats.health > 0:
-		$"../ItemList".show()
+		$"../ItemList".set_visible(true)
 		boss.health -= 25
-		print("ISTG")
+		atkTimer.start(atkTime)
+		print("enemy choosing attack!")
+		playerStats.health -= boss.dmg
+		#print("ISTG")
 	print("SHUT UP")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
 
 
-func _on_timer_timeout() -> void:
-	$"../Timer/TimerLabel".show()
-	$"../Timer/Label".show()
+
+func _on_timer_timeout():
+	print("Timer done!")
 	

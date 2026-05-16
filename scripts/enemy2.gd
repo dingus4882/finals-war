@@ -1,7 +1,8 @@
 extends Area2D
 
 var camZoom = Vector2 (2.5,2.5)
-var playerLoc = Vector2(135.0,75.0)
+var playerLoc = Vector2(135.0,25.0)
+var playerScale = Vector2(1.0, 1.0)
 var enemyNum = 0
 
 var apIdle = idleEnemy.new("Collegeboard", load("res://assets/collegeboard.png"))
@@ -36,6 +37,7 @@ func _input(event):
 		$"../../Player".set_motion_mode(1)
 		$"../../Player".hide()
 		$"../../Player/Camera2D".set_zoom(camZoom)
-		$"../../battleMap/Timer/TimerLabel".hide()
+		$"../../battleMap/ItemList".hide()
+		#$"../../Player/Sprite2D".draw_set_transform(playerLoc, 0.0, playerScale)
 		$"..".queue_free()
 		
